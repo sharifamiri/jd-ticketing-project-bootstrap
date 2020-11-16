@@ -219,7 +219,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header" id="top">
-                            <h2 class="pageheader-title">User Create</h2>
+                            <h2 class="pageheader-title">Project Create</h2>
                         </div>
                     </div>
                 </div>
@@ -229,21 +229,14 @@
 
                 <div class="row">
 
-                    <div class="col-lg-6 col-sm-6">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <form>
 
                             <div class="row">
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <label for="firstname" class="col-form-label">First Name</label>
-                                        <input id="firstname" type="text" placeholder="first name" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <label for="lastname" class="col-form-label">Last Name</label>
-                                        <input id="lastname" type="text" placeholder="last name" class="form-control">
+                                        <label for="projectname" class="col-form-label">Project Name</label>
+                                        <input id="projectname" type="text" placeholder="project name" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -251,15 +244,8 @@
                             <div class="row">
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <label for="emailaddress" class="col-form-label">Email Address</label>
-                                        <input id="emailaddress" type="text" placeholder="email address" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <label for="phonenumber" class="col-form-label">Phone Number</label>
-                                        <input id="phonenumber" type="text" placeholder="phone number" class="form-control">
+                                        <label for="projectcode" class="col-form-label">Project Code</label>
+                                        <input id="projectcode" type="text" placeholder="project code" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -267,37 +253,8 @@
                             <div class="row">
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <label for="password" class="col-form-label">Password</label>
-                                        <input id="password" type="password" placeholder="password" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <label for="repassword" class="col-form-label">Password</label>
-                                        <input id="repassword" type="password" placeholder="confirm your password" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <label>Gender</label><br>
-                                        <label class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Male</span>
-                                        </label>
-                                        <label class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">Female</span>
-                                        </label>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <label>Choose a Role</label>
-                                        <select name="roleid" id="roleid" class="custom-select" required="required">
+                                        <label>Assigned Manager</label>
+                                        <select name="managerid" id="managerid" class="custom-select" required="required">
                                             <option value="select" selected="selected">Select</option>
                                             <option value="admin">Admin</option>
                                             <option value="manager">Manager</option>
@@ -308,7 +265,33 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-sm-6 col-md-6 col-lg-12">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="form-group">
+                                        <label for="start-date-input">Project Start Date</label><br>
+                                        <div class="input-group date" data-provide="datepicker">
+                                            <input data-provide="datepicker" type="date" value="mm-dd-yy" id="start-date-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="form-group">
+                                        <label for="end-date-input">Project End Date</label><br>
+                                        <div class="input-group date" data-provide="datepicker">
+                                            <input data-provide="datepicker" type="date" value="mm-dd-yy" id="end-date-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <label for="projectdetail" class="col-form-label">Project Detail</label>
+                                        <textarea class="form-control" id="projectdetail" type="text" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
                                     <div class="float-right">
                                         <button type="button" class="btn btn-success">Save</button>
                                     </div>
@@ -321,7 +304,7 @@
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="page-header">
-                                    <h2 class="pageheader-title">User List</h2>
+                                    <h2 class="pageheader-title">Project List</h2>
                                 </div>
                             </div>
                         </div>
@@ -329,51 +312,41 @@
                         <table class="table table-striped">
                             <thead>
                             <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email(username)</th>
-                                <th scope="col">Gender</th>
-                                <th scope="col">Phone</th>
-                                <th scope="col">Role</th>
+                                <th scope="col">Project Code</th>
+                                <th scope="col">Project Name</th>
+                                <th scope="col">Start/End Date</th>
+                                <th scope="col">Manager</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>Ozzy</td>
-                                <td>ozzy@cybertekschool.com</td>
-                                <td>Male</td>
-                                <td>2022023333</td>
-                                <td>Employee</td>
+                                <td>PRJ001</td>
+                                <td>Human Resources CRM</td>
+                                <td>11.03.2020-11.09.2020</td>
+                                <td>Delisa Norre</td>
+                                <td>In Progress</td>
                                 <td class="actions">
                                     <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></a>
                                     <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
+                                    <a href=""><button type="button" class="btn btn-twitter btn-sm">Complete</button></a>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Ozzy</td>
-                                <td>ozzy@cybertekschool.com</td>
-                                <td>Male</td>
-                                <td>2022023333</td>
-                                <td>Employee</td>
+                                <td>PRJ002</td>
+                                <td>Infra Upgrade</td>
+                                <td>11.03.2020-11.06.2020</td>
+                                <td>Craig Jark</td>
+                                <td>UAT Testing</td>
                                 <td class="actions">
                                     <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></a>
                                     <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Ozzy</td>
-                                <td>ozzy@cybertekschool.com</td>
-                                <td>Male</td>
-                                <td>2022023333</td>
-                                <td>Employee</td>
-                                <td class="actions">
-                                    <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></a>
-                                    <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
+                                    <a href=""><button type="button" class="btn btn-twitter btn-sm">Complete</button></a>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
-
                         <!-- footer -->
                         <footer class="page-footer font-small blue fixed-bottom">
                             <div class="footer-copyright text-center py-3">© 2020 Cybertek – All Rights Reserved</div>
